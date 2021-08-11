@@ -11,8 +11,8 @@
 ### Screenshots
 
 <p align="center">
-  <img src="/screenshots/screenshot_1.png" width="350">
+  <img src="/screenshots/screen_shot_1.png" width="350">
   <br/>
   <br/>
-  <img src="/screenshots/screenshot_2.png" width="350">
+  <img src="/screenshots/screen_shot_2.png" width="350">
 </p>
