@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_login/constants.dart';
+import 'package:welcome_login/screens/sign_in.dart/sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -38,31 +39,41 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 FittedBox(
-                  child: Container(
-                    margin: const EdgeInsets.only(bottom: 20),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 26,
-                      vertical: 16,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: kPrimaryColor,
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                          "START LEARNING",
-                          style: Theme.of(context)
-                              .textTheme
-                              .button!
-                              .copyWith(color: Colors.black),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInScreen(),
                         ),
-                        const SizedBox(width: 10),
-                        const Icon(
-                          Icons.arrow_forward,
-                          color: Colors.black,
-                        ),
-                      ],
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 20),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 26,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: kPrimaryColor,
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            "START LEARNING",
+                            style: Theme.of(context)
+                                .textTheme
+                                .button!
+                                .copyWith(color: Colors.black),
+                          ),
+                          const SizedBox(width: 10),
+                          const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
